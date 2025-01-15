@@ -15,7 +15,7 @@ public:
     Queue() : front(nullptr), rear(nullptr) {}
 
     // Añadir elemento al final
-    void enqueue(int val) {
+    void push(int val) {
         Node* newNode = new Node(val);
         if (rear == nullptr) {
             front = rear = newNode;
@@ -26,7 +26,7 @@ public:
     }
 
     // Elimina y devuelve el elemento del frente de la cola
-    int dequeue() {
+    int pop() {
         if (front == nullptr) {
             return -1;
         }
