@@ -46,3 +46,15 @@ void inorder(Node* root) {
         inorder(root->right);
     }
 }
+
+
+// Función para queee aa para que llene un vector con los valores inorder de un árbol
+void inorderTraversal(TreeNode* root, vector<int>& result) {
+        if (!root) return; 
+
+        inorderTraversal(root->left, result);
+
+        result.push_back(root->val);
+
+        inorderTraversal(root->right, result);
+    }
